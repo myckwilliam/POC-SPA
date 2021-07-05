@@ -175,7 +175,6 @@ id12.onclick = function(){
     const d = copyArray(myDopArray)
     str(d, 'dop12')
     displayNone(d)
-    console.log(a)
 }
 
 
