@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #00ffff;
+}
+
+.btns {
+    margin-bottom: 50px;
+}
+
+.card {
+    padding: 20px;
+}
+
+.bot {
+    border: none;
+    text-decoration: none;
+    background-color: inherit;
+    padding: 10px;
+}
+
+.active {
+    background-color: rgb(255, 47, 203);
+    color: white;
+}
+
+
+@keyframes anim {
+    0% {
+        background-color: inherit;
+        color: black
+    }
+    100% {
+        background-color: rgb(255, 47, 203);
+        color: white;
+    }
+}
+
+.bot:hover{
+    animation: anim 0.5s forwards;
+}
+
+.bot:focus {
+    outline: none;
+    background-color: rgb(255, 47, 203);
+    color: white;
+}
