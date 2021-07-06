@@ -33,7 +33,6 @@ const setUnactive = array => {
     for (let i = 0; i < array.length; i++) {
         document.getElementById(array[i]).classList.remove('active');
     }
-    console.log(array)
 }
 
 const copyArray = array => {
@@ -44,8 +43,25 @@ const setActive = string => {
     document.getElementById(string).classList.add('active')
 }
 
+const show = (...arguments) => {
+    for (let i = 0; i < arguments.length; i++) {
+        arguments[i].onclick = function(){
+            setActive(myOpArray[i])
+            const c = copyArray(myOpArray)
+            str(c, myOpArray[i])
+            setUnactive(c)
+            display(myDopArray[i])
+            const d = copyArray(myDopArray)
+            str(d, myDopArray[i])
+            displayNone(d)
+        }
+    }
+}
 
-id1.onclick = function(){
+show(id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12)
+
+
+/*id1.onclick = function(){
     setActive('op1')
     const c = copyArray(myOpArray)
     str(c, 'op1')
@@ -175,6 +191,6 @@ id12.onclick = function(){
     const d = copyArray(myDopArray)
     str(d, 'dop12')
     displayNone(d)
-}
+}*/
 
 
