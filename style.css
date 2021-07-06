@@ -48,3 +48,7 @@ body{
     background-color: rgb(255, 47, 203);
     color: white;
 }
+
+.btn-group{
+    justify-content: space-evenly;
+}

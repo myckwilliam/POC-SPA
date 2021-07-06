@@ -10,13 +10,22 @@ const id9 = document.getElementById('op9');
 const id10 = document.getElementById('op10');
 const id11 = document.getElementById('op11');
 const id12 = document.getElementById('op12');
+const id13 = document.getElementById('op13');
+const id14 = document.getElementById('op14');
+const id15 = document.getElementById('op15');
+const id16 = document.getElementById('op16');
+const id17 = document.getElementById('op17');
+const id18 = document.getElementById('op18');
+const id19 = document.getElementById('op19');
+const id20 = document.getElementById('op20');
+const id21 = document.getElementById('op21');
 
 const display = string => {
     document.getElementById(string).style.display = "block";
 }
 
-const myOpArray = ['op1','op2','op3','op4','op5','op6','op7','op8','op9','op10','op11','op12'];
-const myDopArray = ['dop1','dop2','dop3','dop4','dop5','dop6','dop7','dop8','dop9','dop10','dop11','dop12'];
+const myOpArray = ['op1','op2','op3','op4','op5','op6','op7','op8','op9','op10','op11','op12','op13','op14','op15','op16','op17','op18','op19','op20','op21'];
+const myDopArray = ['dop1','dop2','dop3','dop4','dop5','dop6','dop7','dop8','dop9','dop10','dop11','dop12','dop13','dop14','dop15','dop16','dop17','dop18','dop19','dop20','dop21'];
 
 
 const str = (array, element) => {
@@ -58,139 +67,4 @@ const show = (...arguments) => {
     }
 }
 
-show(id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12)
-
-
-/*id1.onclick = function(){
-    setActive('op1')
-    const c = copyArray(myOpArray)
-    str(c, 'op1')
-    setUnactive(c)
-    display('dop1')
-    const d = copyArray(myDopArray)
-    str(d, 'dop1')
-    displayNone(d)
-}
-
-id2.onclick = function(){
-    setActive('op2')
-    const c = copyArray(myOpArray)
-    str(c, 'op2')
-    setUnactive(c)
-    display('dop2')
-    const d = copyArray(myDopArray)
-    str(d, 'dop2')
-    displayNone(d)
-}
-
-id3.onclick = function(){
-    setActive('op3')
-    const c = copyArray(myOpArray)
-    str(c, 'op3')
-    setUnactive(c)
-    display('dop3')
-    const d = copyArray(myDopArray)
-    str(d, 'dop3')
-    displayNone(d)
-}
-
-id4.onclick = function(){
-    setActive('op4')
-    const c = copyArray(myOpArray)
-    str(c, 'op4')
-    setUnactive(c)
-    display('dop4')
-    const d = copyArray(myDopArray)
-    str(d, 'dop4')
-    displayNone(d)
-}
-
-id5.onclick = function(){
-    setActive('op5')
-    const c = copyArray(myOpArray)
-    str(c, 'op5')
-    setUnactive(c)
-    display('dop5')
-    const d = copyArray(myDopArray)
-    str(d, 'dop5')
-    displayNone(d)
-}
-
-id6.onclick = function(){
-    setActive('op6')
-    const c = copyArray(myOpArray)
-    str(c, 'op6')
-    setUnactive(c)
-    display('dop6')
-    const d = copyArray(myDopArray)
-    str(d, 'dop6')
-    displayNone(d)
-}
-
-id7.onclick = function(){
-    setActive('op7')
-    const c = copyArray(myOpArray)
-    str(c, 'op7')
-    setUnactive(c)
-    display('dop7')
-    const d = copyArray(myDopArray)
-    str(d, 'dop7')
-    displayNone(d)
-}
-
-id8.onclick = function(){
-    setActive('op8')
-    const c = copyArray(myOpArray)
-    str(c, 'op8')
-    setUnactive(c)
-    display('dop8')
-    const d = copyArray(myDopArray)
-    str(d, 'dop8')
-    displayNone(d)
-}
-
-id9.onclick = function(){
-    setActive('op9')
-    const c = copyArray(myOpArray)
-    str(c, 'op9')
-    setUnactive(c)
-    display('dop9')
-    const d = copyArray(myDopArray)
-    str(d, 'dop9')
-    displayNone(d)
-}
-
-id10.onclick = function(){
-    setActive('op10')
-    const c = copyArray(myOpArray)
-    str(c, 'op10')
-    setUnactive(c)
-    display('dop10')
-    const d = copyArray(myDopArray)
-    str(d, 'dop10')
-    displayNone(d)
-}
-
-id11.onclick = function(){
-    setActive('op11')
-    const c = copyArray(myOpArray)
-    str(c, 'op11')
-    setUnactive(c)
-    display('dop11')
-    const d = copyArray(myDopArray)
-    str(d, 'dop11')
-    displayNone(d)
-}
-
-id12.onclick = function(){
-    setActive('op12')
-    const c = copyArray(myOpArray)
-    str(c, 'op12')
-    setUnactive(c)
-    display('dop12')
-    const d = copyArray(myDopArray)
-    str(d, 'dop12')
-    displayNone(d)
-}*/
-
-
+show(id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id13,id14,id15,id16,id17,id18,id19,id20,id21)
