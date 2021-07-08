@@ -12,7 +12,11 @@ body{
 }
 
 .card {
-    padding: 20px;
+    padding: 10px;
+}
+
+.row {
+    width: auto;
 }
 
 .bot {
@@ -39,6 +43,10 @@ body{
     }
 }
 
+.bot {
+    border-radius: 5px;
+}
+
 .bot:hover{
     animation: anim 0.5s forwards;
 }
@@ -52,3 +60,46 @@ body{
 .btn-group{
     justify-content: space-evenly;
 }
+
+.groups {
+    padding: 10px 0 0 0;
+    background-color: rgb(255, 47, 203);
+    border: none;
+    box-shadow: none;
+}
+
+.operations {
+    border: none;
+    box-shadow: none;
+}
+
+.ot {
+    color: white;
+    background-color: rgb(255, 47, 203);
+    border: none;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    font-weight: 600;
+
+}
+
+.ot:hover {
+    color:rgb(255, 47, 203);
+    background-color: white;
+    outline: none;
+    
+}
+
+.ot:focus {
+    color:rgb(255, 47, 203);
+    background-color: white;
+    outline: none;
+    
+}
+
+.altActive {
+    background-color: white;
+    color:rgb(255, 47, 203)
+}
+
+
