@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: #00ffff;
+    background-color: #222;
     width: 100vw;
 }
 
@@ -22,40 +22,19 @@ body{
 .bot {
     border: none;
     text-decoration: none;
-    background-color: inherit;
+    background-color: transparent;
     padding: 10px;
-}
-
-.active {
-    background-color: rgb(255, 47, 203);
-    color: white;
-}
-
-
-@keyframes anim {
-    0% {
-        background-color: inherit;
-        color: black
-    }
-    100% {
-        background-color: rgb(255, 47, 203);
-        color: white;
-    }
-}
-
-.bot {
     border-radius: 5px;
+    transition: all 0.4s ease;
 }
 
-.bot:hover{
-    animation: anim 0.5s forwards;
-}
-
-.bot:focus {
+.active, .bot:focus, .bot:hover {
+    background-color: coral;
+    color: #eee;
     outline: none;
-    background-color: rgb(255, 47, 203);
-    color: white;
 }
+
+
 
 .btn-group{
     justify-content: space-evenly;
@@ -63,7 +42,7 @@ body{
 
 .groups {
     padding: 10px 0 0 0;
-    background-color: rgb(255, 47, 203);
+    background-color: #444;
     border: none;
     box-shadow: none;
 }
@@ -71,35 +50,26 @@ body{
 .operations {
     border: none;
     box-shadow: none;
+    background-color: #eee;
 }
 
 .ot {
-    color: white;
-    background-color: rgb(255, 47, 203);
+    color: #eee;
+    background-color: transparent;
     border: none;
     padding: 5px;
+    font-size: 1rem;
     border-radius: 10px 10px 0 0;
     font-weight: 600;
 
 }
 
-.ot:hover {
-    color:rgb(255, 47, 203);
-    background-color: white;
+.ot:hover, .ot:focus, .altActive {
+    color:coral;
+    background-color: #eee;
     outline: none;
     
 }
 
-.ot:focus {
-    color:rgb(255, 47, 203);
-    background-color: white;
-    outline: none;
-    
-}
-
-.altActive {
-    background-color: white;
-    color:rgb(255, 47, 203)
-}
 
 
