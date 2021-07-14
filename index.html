@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br"">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,16 +67,29 @@
         </div>
     </div>
 
-    <div class="row col-12" id="dop1" style="display: none;">
+    <div class="row col-12 percentual" id="dop1" style="display: none;">
+      
         <div class="card col-6 container">
+            <h3>Percentual</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="percentual1" placeholder="Quanto é">
+                        <span class="input-group-prepend">
+                          <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="percentual2" placeholder="de">
+                        <span class="input-group-prepend">
+                            <div class="input-group-text">?</div>
+                        </span>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <h4>Resultado:</h4>
+                    <h5 id="resultado-percentual"></h5>
                 </div>    
             </div>
         </div>
@@ -85,14 +98,23 @@
 
     <div class="row col-12" id="dop2" style="display: none;">
         <div class="card col-6 container">
+            <h3>Aumento Percentual</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="aumentoPercentualValor" placeholder="Valor de">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="aumentoPercentualAumento" placeholder="aumentado em">
+                        <span class="input-group-prepend">
+                          <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <h4>Resultado:</h4>
+                    <h5 id="resultado-aumento-percentual"></h5>
                 </div>    
             </div>
         </div>
@@ -100,14 +122,23 @@
 
     <div class="row col-12" id="dop3" style="display: none;">
         <div class="card col-6 container">
+            <h3>Desconto Percentual</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="descontoPercentualValor" placeholder="Valor de">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="descontoPercentualDesconto" placeholder="descontado em">
+                        <span class="input-group-prepend">
+                          <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <h4>Resultado:</h4>
+                    <h5 id="resultado-desconto-percentual"></h5>
                 </div>    
             </div>
         </div>
@@ -115,180 +146,327 @@
 
     <div class="row col-12" id="dop4" style="display: none;">
         <div class="card col-6 container">
+            <h3>Margem de Vendas</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <span class="input-group-prepend">
+                            <div class="input-group-text">R$</div>
+                        </span>
+                        <input type="number" class="form-control" id="margemVendasCusto" placeholder="Custo do produto...">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="margemVendasMargem" placeholder="com margem de...">
+                        <span class="input-group-prepend">
+                          <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
-            </div>
+                    <h4>Vendido por (R$):</h4>
+                    <h5 id="resultado-margem-vendas"></h5>
+                </div>
+            </div>    
         </div>
     </div>
 
     <div class="row col-12" id="dop5" style="display: none;">
         <div class="card col-6 container">
+            <h3>Variação Percentual</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="variacaoPercentualInicio" placeholder="Valor de...">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="variacaoPercentualFinal" placeholder="foi para...">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Teve uma mudança de (%):</h4>
+                    <h5 id="resultado-variacao-percentual"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop6" style="display: none;">
         <div class="card col-6 container">
+            <h3>Relação Percentual</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="relacaoPercentualFinal" placeholder="O valor de...">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="relacaoPercentualOriginal" placeholder="é quantos por cento de...">
+                    </div>
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Resultado (%):</h4>
+                    <h5 id="resultado-relacao-percentual"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop7" style="display: none;">
         <div class="card col-6 container">
+            <h3>Valor Futuro</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorFuturoSimplesInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorFuturoSimplesInput2" placeholder="Taxa de Juros:">
+                        <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="valorFuturoSimplesInput3" placeholder="Número de Períodos">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Valor Futuro Juros Simples:</h4>
+                    <h5 id="resultado-valor-futuro-simples"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop8" style="display: none;">
         <div class="card col-6 container">
+            <h3>Valor Presente Juros Simples</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group">
+                        <label>Valor Presente:</label>
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorPresenteSimplesInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorPresenteSimplesInput2" placeholder="Taxa de Juros:">
+                        <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="valorPresenteSimplesInput3" placeholder="Número de Períodos:">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Valor Presente:</h4>
+                    <h5 id="resultado-valor-presente-simples"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop9" style="display: none;">
         <div class="card col-6 container">
+            <h3>Taxa de Juros Simples</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="taxaJurosSimplesInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="taxaJurosSimplesInput2" placeholder="Valor Futuro:">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="taxaJurosSimplesInput3" placeholder="Número de Períodos:">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Taxa de Juros (%):</h4>
+                    <h5 id="resultado-taxa-juros-simples"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop10" style="display: none;">
         <div class="card col-6 container">
+            <h3>Número de Períodos Juros Simples</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="numeroPeriodosSimplesInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="numeroPeriodosSimplesInput2" placeholder="Valor Futuro:">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="numeroPeriodosSimplesInput3" placeholder="Taxa de Juros:">
+                         <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Número de Períodos:</h4>
+                    <h5 id="resultado-numero-periodos-simples"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop11" style="display: none;">
         <div class="card col-6 container">
+            <h3>Conversão de Taxas de Juros</h3>
             <div class="row">
-                <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                <div class="card-body col-6" >
+                    <div class="input-group" style="margin-bottom: 20px">
+                        <input type="number" class="form-control" id="conversaoTaxaInput1" placeholder="Taxa de Juros:">
+                         <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <select id="conversaoTaxaInput2" class="form-control" value="1">
+                            <option value="1" selected>ao dia</option>
+                            <option value="7">à semana</option>
+                            <option value="30">ao mês</option>
+                            <option value="60">ao bimestre</option>
+                            <option value="90">ao trimestre</option>
+                            <option value="180">ao semestre</option>
+                            <option value="360">ao ano</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="conversaoTaxaInput3" class="form-control" value="1">
+                          <option value="1" selected>ao dia</option>
+                          <option value="7">à semana</option>
+                          <option value="30">ao mês</option>
+                          <option value="60">ao bimestre</option>
+                          <option value="90">ao trimestre</option>
+                          <option value="180">ao semestre</option>
+                          <option value="360">ao ano</option>
+                        </select>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Taxa de Juros (%):</h4>
+                    <h5 id="resultado-conversao-taxa"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop12" style="display: none;">
         <div class="card col-6 container">
+            <h3>Valor Futuro Juros Compostos</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorFuturoCompostosInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorFuturoCompostosInput2" placeholder="Taxa de Juros:">
+                        <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="valorFuturoCompostosInput3" placeholder="Número de Períodos">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Valor Futuro Juros Compostos:</h4>
+                    <h5 id="resultado-valor-futuro-compostos"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop13" style="display: none;">
         <div class="card col-6 container">
+            <h3>Valor Presente Juros Compostos</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group">
+                        <label>Valor Presente Juros Compostos:</label>
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorPresenteCompostosInput1" placeholder="Valor Futuro:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="valorPresenteCompostosInput2" placeholder="Taxa de Juros:">
+                        <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="valorPresenteCompostosInput3" placeholder="Número de Períodos:">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Valor Presente:</h4>
+                    <h5 id="resultado-valor-presente-compostos"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop14" style="display: none;">
         <div class="card col-6 container">
+            <h3>Taxa de Juros Compostos</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="taxaJurosCompostosInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="taxaJurosCompostosInput2" placeholder="Valor Futuro:">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="taxaJurosCompostosInput3" placeholder="Número de Períodos:">
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Taxa de Juros (%):</h4>
+                    <h5 id="resultado-taxa-juros-compostos"></h5>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="row col-12" id="dop15" style="display: none;">
         <div class="card col-6 container">
+            <h3>Número de Períodos Juros Compostos</h3>
             <div class="row">
                 <div class="card-body col-6">
-                    <h4 class="card-title ">Percentual</h4>
-                    <p class="card-text">Text</p>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="numeroPeriodosCompostosInput1" placeholder="Valor Presente:">
+                    </div>
+                    <div class="input-group" style="margin-bottom: 20px;">
+                        <input type="number" class="form-control" id="numeroPeriodosCompostosInput2" placeholder="Valor Futuro:">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="numeroPeriodosCompostosInput3" placeholder="Taxa de Juros:">
+                         <span class="input-group-prepend">
+                            <div class="input-group-text">%</div>
+                        </span>
+                    </div>
+                    
                 </div>
                 <div class="card-body col-6">
-                    <h4 class="card-title">Percentual</h4>
-                    <p class="card-text">Text</p>
-                </div>    
+                    <h4>Número de Períodos:</h4>
+                    <h5 id="resultado-numero-periodos-compostos"></h5>
+                </div>
             </div>
         </div>
     </div>
@@ -383,7 +561,7 @@
         </div>
     </div>
 
-
+    <script src="operations.js"></script>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

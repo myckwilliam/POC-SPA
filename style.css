@@ -13,6 +13,14 @@ body{
 
 .card {
     padding: 10px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.card input:focus, .card input:active, .card select:focus, .card select:active {
+    box-shadow: 2px 1px 4px coral;
+    border-color: coral;
+    
 }
 
 .row {
@@ -33,8 +41,6 @@ body{
     color: #eee;
     outline: none;
 }
-
-
 
 .btn-group{
     justify-content: space-evenly;
@@ -69,6 +75,10 @@ body{
     background-color: #eee;
     outline: none;
     
+}
+
+h5 {
+    font-size: 50px;
 }
 
 
