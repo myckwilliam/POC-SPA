@@ -274,38 +274,36 @@ atribuicao(arrayNumeroPeriodosCompostos)('resultado-numero-periodos-compostos')(
 
 ///Dinheiro no tempo
 
+//função dinheiro no tempo valor futuro
 
-//const valor_Futuro = (p) => (i) =>(n) => (m) => (p*(1+(i/100))**n ) + m*([((1+(i/100))**n) - 1]/(i/100))
-function valor_Futuro(p) {
-    return function(i) {
-        return function(n) {
-            return function(m) {
-              const resultado = (p*(1+(i/100))**n ) + m*([((1+(i/100))**n) - 1]/(i/100))
-              if(resultado < 0){
-                return resultado * (-1)
-              }else{
-                return resultado 
-              }
-            }
-        }
-    }
+const dinheiroNoTempoValorFuturoInput1 = document.querySelector('#dinheiroNoTempoValorFuturoInput1');
+const dinheiroNoTempoValorFuturoInput2 = document.querySelector('#dinheiroNoTempoValorFuturoInput2');
+const dinheiroNoTempoValorFuturoInput3 = document.querySelector('#dinheiroNoTempoValorFuturoInput3');
+const dinheiroNoTempoValorFuturoInput4 = document.querySelector('#dinheiroNoTempoValorFuturoInput4');
+
+const arrayDinheiroNoTempoValorFuturo = [dinheiroNoTempoValorFuturoInput1, dinheiroNoTempoValorFuturoInput2, dinheiroNoTempoValorFuturoInput3, dinheiroNoTempoValorFuturoInput4];
+
+const dinheiroNoTempoValorFuturo = array => {
+  return -1*array[3]*((1+(array[0]/100))**array[1]) + -1*array[2]*(((1+(array[0]/100))**array[1]) - 1)/(array[0]/100)
+  
 }
 
-function valor_Presente(f) {
-    return function(i) {
-        return function(n) {
-            return function(m) {
-                const resultado = (f/(1+(i/100))**n) + m*[((1+(i/100))**n)-1]/[(1+(i/100))**(n+1) - (1+i/100)**n]
-                if(resultado < 0){
-                  return resultado*(-1)
-                }else{
-                  return resultado
-                }
-                  
-            }
-        }
-    }
+atribuicao(arrayDinheiroNoTempoValorFuturo)('resultado-dinheiro-tempo-valor-futuro')(dinheiroNoTempoValorFuturo)(dinheiroNoTempoValorFuturoInput1, dinheiroNoTempoValorFuturoInput2, dinheiroNoTempoValorFuturoInput3, dinheiroNoTempoValorFuturoInput4);
+
+//função dinheiro no tempo valor presente
+const dinheiroNoTempoValorPresenteInput1 = document.querySelector('#dinheiroNoTempoValorPresenteInput1');
+const dinheiroNoTempoValorPresenteInput2 = document.querySelector('#dinheiroNoTempoValorPresenteInput2');
+const dinheiroNoTempoValorPresenteInput3 = document.querySelector('#dinheiroNoTempoValorPresenteInput3');
+const dinheiroNoTempoValorPresenteInput4 = document.querySelector('#dinheiroNoTempoValorPresenteInput4');
+
+const arrayDinheiroNoTempoValorPresente = [dinheiroNoTempoValorPresenteInput1, dinheiroNoTempoValorPresenteInput2, dinheiroNoTempoValorPresenteInput3, dinheiroNoTempoValorPresenteInput4];
+
+const dinheiroNoTempoValorPresente = array => {
+  return -1*array[3]/((1+(array[0]/100))**array[1]) + -1*array[2]*(((1+(array[0]/100))**array[1])-1)/((1+(array[0]/100))**(array[1]+1) - (1+array[0]/100)**array[1])
 }
+
+atribuicao(arrayDinheiroNoTempoValorPresente)('resultado-dinheiro-tempo-valor-presente')(dinheiroNoTempoValorPresente)(dinheiroNoTempoValorPresenteInput1, dinheiroNoTempoValorPresenteInput2, dinheiroNoTempoValorPresenteInput3, dinheiroNoTempoValorPresenteInput4);
+
 
 ////Financiamento de empréstimo
 
